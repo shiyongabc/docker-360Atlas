@@ -8,6 +8,7 @@ MAINTAINER kev<noreply@datageek.info>
 
 WORKDIR /usr/local
 
+RUN apt-get update -qq
 RUN apt-get install -y wget
 RUN wget https://github.com/Qihoo360/Atlas/releases/download/2.2/Atlas-2.2-debian7.0-x86_64.deb
 RUN  apt-get remove wget
