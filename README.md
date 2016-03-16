@@ -11,3 +11,6 @@
   1. 端口1234，是 Atlas 的 mysql 代理端口；
   2. 端口2345，是 Atlas 的管理端口；
   3. 文件docker-atlas.cnf，是 Atlas 的配置文件，镜像中并没有该文件，需要自行从容器外部进行隐射； 
+
+提供原始 Atlas 配置文件供参考，路径是 https://github.com/mybbcat/docker-360Atlas/blob/master/docker-atlas.cnf。  
+
