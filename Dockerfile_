@@ -16,12 +16,9 @@ RUN dpkg -i  Atlas-2.2-debian7.0-x86_64.deb
 
 RUN apt-get remove -y wget
 
-RUN rm /usr/local/mysql-proxy/conf/test.cnf
+VOLUME /usr/local/mysql-proxy/conf/docker-atlas.cnf
 
-VOLUME /usr/local/mysql-proxy/conf/test.cnf
-
-VOLUME /usr/local/mysql-proxy/conf/test.cnf
 EXPOSE 1234
 EXPOSE 2345
 
-CMD /usr/local/mysql-proxy/bin/mysql-proxyd test start
+CMD /usr/local/mysql-proxy/bin/mysql-proxyd docker-atlas start
