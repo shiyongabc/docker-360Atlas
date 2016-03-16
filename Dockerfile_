@@ -21,6 +21,3 @@ VOLUME /usr/local/mysql-proxy/conf/docker-atlas.cnf
 EXPOSE 1234
 EXPOSE 2345
 
-CMD /usr/local/mysql-proxy/bin/mysql-proxyd docker-atlas start
-
-CMD tail -f /usr/local/mysql-proxy/log/docker-atlas.log
