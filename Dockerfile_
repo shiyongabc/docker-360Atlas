@@ -18,5 +18,6 @@ RUN apt-get remove -y wget
 
 CMD /usr/local/mysql-proxy/bin/mysql-proxyd test start
 
+VOLUME /usr/local/mysql-proxy/conf/test.cnf
 EXPOSE 1234
 EXPOSE 2345
