@@ -20,6 +20,7 @@ RUN rm /usr/local/mysql-proxy/conf/test.cnf
 
 VOLUME /usr/local/mysql-proxy/conf/test.cnf
 
+VOLUME /usr/local/mysql-proxy/conf/test.cnf
 EXPOSE 1234
 EXPOSE 2345
 
