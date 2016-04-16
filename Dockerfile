@@ -5,8 +5,8 @@
 FROM ubuntu:16.04
 
 #更新系统
-RUN apt-get upgrade
-RUN apt-get upgrade -y
+RUN apt-get update
+RUN apt-get update -y
 
 #安装 wget
 RUN apt-get install -y wget
