@@ -15,7 +15,6 @@ RUN apt-get install -y wget
 RUN apt-get install -y mysql-client-5.6
 
 #下载并安装 Atlas 2.2
-RUN cd /var/lib/docker
 RUN wget https://github.com/Qihoo360/Atlas/releases/download/2.2/Atlas-2.2-debian7.0-x86_64.deb
 RUN dpkg -i  Atlas-2.2-debian7.0-x86_64.deb
 
@@ -23,11 +22,11 @@ RUN dpkg -i  Atlas-2.2-debian7.0-x86_64.deb
 RUN apt-get remove -y wget
 
 #公开 Atlas 的配置文件
-VOLUME /var/lib/docker/mysql-proxy/conf/docker-atlas.cnf
+VOLUME /usr/local/docker/mysql-proxy/conf/docker-atlas.cnf
 
 #公开 Atlas 的端口，1234是代理端口，2345是管理端口
 EXPOSE 1234
 EXPOSE 2345
 
 #运行 Atlas，并利用持续打印 Atlas 日志
-CMD /var/lib/docker/mysql-proxy/bin/mysql-proxyd docker-atlas start && tail -f /var/lib/docker/mysql-proxy/log/docker-atlas.log
+CMD /usr/local/docker/mysql-proxy/bin/mysql-proxyd docker-atlas start && tail -f /usr/local/docker/mysql-proxy/log/docker-atlas.log
