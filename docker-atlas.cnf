@@ -31,7 +31,7 @@ log-level=error
 log-path=/usr/local/mysql-proxy/log
 
 #实例名称，用于同一台机器上多个Atlas实例间的区分
-instance=atlas-default_atlas-default_1
+instance=docker-atlas
 
 #Atlas监听的工作接口IP和端口
 proxy-address=0.0.0.0:1234
