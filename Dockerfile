@@ -5,8 +5,8 @@
 FROM ubuntu:16.04
 
 #更新系统
-RUN apt-get update
-RUN apt-get update -y
+RUN apt-get upgrade
+RUN apt-get upgrade -y
 
 #安装 wget
 RUN apt-get install -y wget
@@ -15,14 +15,14 @@ RUN apt-get install -y wget
 RUN apt-get install -y mysql-client-5.6
 
 #下载并安装 Atlas 2.2
-RUN wget https://github.com/Qihoo360/Atlas/releases/download/2.2/Atlas-2.2-debian7.0-x86_64.deb
-RUN dpkg -i Atlas-2.2-debian7.0-x86_64.deb
+RUN wget http://oa.shengyisoft.com/Atlas-2.2-debian7.0-x86_64.deb
+RUN dpkg -i  Atlas-2.2-debian7.0-x86_64.deb
 
 #移除 wget
 RUN apt-get remove -y wget
 
 #公开 Atlas 的配置文件
-VOLUME /usr/local/
+VOLUME /usr/local/mysql-proxy/conf/
 
 #公开 Atlas 的端口，1234是代理端口，2345是管理端口
 EXPOSE 1234
