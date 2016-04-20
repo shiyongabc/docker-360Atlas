@@ -22,7 +22,7 @@ RUN dpkg -i  Atlas-2.2-debian7.0-x86_64.deb
 RUN apt-get remove -y wget
 
 #公开 Atlas 的配置文件
-VOLUME /usr/local/mysql-proxy/conf/docker-atlas.cnf
+VOLUME /usr/local/mysql-proxy/conf/
 
 #公开 Atlas 的端口，1234是代理端口，2345是管理端口
 EXPOSE 1234
