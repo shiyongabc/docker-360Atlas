@@ -1,19 +1,19 @@
 [mysql-proxy]
 
 #管理接口的用户名
-admin-username=xyfm_atlas
+admin-username=user
 
 #管理接口的密码
-admin-password=xyfm123456
+admin-password=pwd
 
 #实现管理接口的Lua脚本所在路径
 admin-lua-script=/usr/local/mysql-proxy/lib/mysql-proxy/lua/admin.lua
 
 #Atlas后端连接的MySQL主库的IP和端口，可设置多项，用逗号分隔
-proxy-backend-addresses=rdsa0kue13ye4r3z9g61.mysql.rds.aliyuncs.com:3306
+proxy-backend-addresses=220.197.198.85:50070
 
 #Atlas后端连接的MySQL从库的IP和端口，@后面的数字代表权重，用来作负载均衡，若省略则默认为1，可设置多项，用逗号分隔
-proxy-read-only-backend-addresses=rds76r307c5ht4q841o7.mysql.rds.aliyuncs.com:3306
+proxy-read-only-backend-addresses=220.197.198.198:50070
 
 #设置Atlas的运行方式，设为true时为守护进程方式，设为false时为前台方式，一般开发调试时设为false，线上运行时设为true
 daemon=true

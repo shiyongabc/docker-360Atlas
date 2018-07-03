@@ -1,0 +1,10 @@
+atlas:
+  image: shyongabc/atlas:latest
+  #mem_limit: 2000m
+  ports:
+    - "1234:1234"
+    - "2345:2345"
+  volumes:
+    - "./conf/docker-atlas.cnf:/usr/local/mysql-proxy/conf/docker-atlas.cnf:ro"
+
+
