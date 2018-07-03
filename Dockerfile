@@ -15,8 +15,9 @@ RUN apt-get install -y wget
 RUN apt-get install -y mysql-client-5.6
 
 #下载并安装 Atlas 2.2
-RUN wget http://oa.shengyisoft.com/Atlas-2.2-debian7.0-x86_64.deb
-RUN dpkg -i  Atlas-2.2-debian7.0-x86_64.deb
+COPY Atlas-2.2-debian7.0-x86_64.deb /Atlas-2.2-debian7.0-x86_64.deb
+RUN chmod +x /Atlas-2.2-debian7.0-x86_64.deb
+RUN dpkg -i  /Atlas-2.2-debian7.0-x86_64.deb
 
 #移除 wget
 RUN apt-get remove -y wget
