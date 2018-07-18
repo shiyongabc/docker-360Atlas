@@ -1,5 +1,5 @@
 atlas:
-  image: shyongabc/atlas:latest
+  image: shiyongabc/atlas:latest
   #mem_limit: 2000m
   ports:
     - "1234:1234"
