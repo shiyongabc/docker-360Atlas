@@ -6,6 +6,5 @@ atlas:
     - "2345:2345"
   volumes:
     - "./conf/docker-atlas.cnf:/usr/local/mysql-proxy/conf/docker-atlas.cnf:ro"
-    - "./encrypt:/usr/local/mysql-proxy/:ro"
 
 
